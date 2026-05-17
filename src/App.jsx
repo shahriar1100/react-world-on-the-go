@@ -1,21 +1,19 @@
+import { Suspense, use } from 'react'
 import './App.css'
+import Countries from './components/countires/Countries'
+
+const countriesPrimise = fetch('https://openapi.programming-hero.com/api/all').then(res => res.json())
 
 function App() {
-
-
   return (
     <>
-      <section id="center">
+      <div className="container">
+        
+          <Suspense fallback={<p>⌛Loading data...</p>}>
+            <Countries countriesPrimise={countriesPrimise}></Countries>
+          </Suspense>
 
-        <div>
-          <h1>Get started</h1>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-
-
-
+      </div>
     </>
   )
 }
