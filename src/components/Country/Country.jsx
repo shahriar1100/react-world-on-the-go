@@ -5,13 +5,13 @@ export default function Country({ country }) {
 
   return (
     <>
-      <div className="countryCard">
+      <div className="countryCard mainCard">
         <img src={country.flags.flags.png} alt={country.flags.flags.alt} />
-        <h3>
+        <h3 className="textBlack">
           Name: <span className="countryName"> {country.name.common}</span>
         </h3>
-        <p>Population: {country.population.population}</p>
-        <p>Region: {country.region.region}</p>
+        <p className="textBlack">Population: {country.population.population}</p>
+        <p className="textBlack">Region: {country.region.region}</p>
       </div>
     </>
   );

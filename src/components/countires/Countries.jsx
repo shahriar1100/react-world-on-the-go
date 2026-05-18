@@ -7,7 +7,7 @@ export default function Countries({countriesPrimise}) {
   
   return (
     <>
-    <div>
+    <div className='mainCard'>
       <h1>In The Countries: {countries.length} </h1>
      <div className="flex">
        {

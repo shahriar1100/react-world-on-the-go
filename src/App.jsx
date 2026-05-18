@@ -7,7 +7,7 @@ const countriesPrimise = fetch('https://openapi.programming-hero.com/api/all').t
 function App() {
   return (
     <>
-      <div className="container">
+      <div className="container mainCard">
         
           <Suspense fallback={<p>⌛Loading data...</p>}>
             <Countries countriesPrimise={countriesPrimise}></Countries>

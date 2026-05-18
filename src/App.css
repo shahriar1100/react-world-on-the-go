@@ -21,6 +21,7 @@
   overflow: hidden;
   transition: all 0.3s ease;
   margin-bottom: 15px;
+  color: #000;
 
   /* Modern Box Shadow */
   box-shadow:
@@ -45,4 +46,12 @@
 .countryName {
   color: #6c63ff;
   font-weight: 700;
+}
+
+.mainCard{
+  color: #ffffff;
+}
+
+.textBlack{
+  color: #000;
 }
