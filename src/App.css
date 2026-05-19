@@ -1,3 +1,8 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+
+
 .container{
   width: 1320px;
   margin: 0 auto;
@@ -54,4 +59,84 @@
 
 .textBlack{
   color: #000;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Card */
+.countryCard {
+  width: 320px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  overflow: hidden;
+  padding-bottom: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.countryCard:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.45);
+}
+
+/* Image */
+.countryCard img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Text Area */
+.countryCard h3,
+.countryCard p {
+  padding: 0 18px;
+}
+
+.countryCard h3 {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+}
+
+.countryCard p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #d1d5db;
+}
+
+/* Highlight */
+.countryName {
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* Optional */
+.textBlack {
+  color: white;
+}
+
+/* Grid Layout */
+.mainCard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
