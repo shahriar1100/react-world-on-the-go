@@ -1,7 +1,11 @@
 import React from "react";
 
 export default function Country({ country }) {
-  console.log(country.currencies.currencies);
+
+    const handleVisited = ()=>{
+      console.log("btn clicked");
+      
+    }
 
   return (
     <>
@@ -12,6 +16,8 @@ export default function Country({ country }) {
         </h3>
         <p className="textBlack">Population: {country.population.population}</p>
         <p className="textBlack">Region: {country.region.region}</p>
+        <p className="textBlack">Area: {country.area.area} {country.area.area > 300000 ? "Big Country" : "Small Country"}</p>
+        <button className="btn" onClick={handleVisited}>Not Visited</button>
       </div>
     </>
   );

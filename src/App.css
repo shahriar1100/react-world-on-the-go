@@ -140,3 +140,28 @@ body {
   flex-direction: column;
   gap: 5px;
 }
+
+.btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Click korle border asbe */
+.btn:focus {
+  outline: none;
+  border: 2px solid white;
+  box-shadow: 0 0 15px #8b5cf6;
+}
