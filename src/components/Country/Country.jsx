@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Country({ country }) {
+export default function Country({ country,handleVisitedCountries }) {
   
   const [visited, setVisited] = useState(false)
   
@@ -14,7 +14,8 @@ export default function Country({ country }) {
 
     // setVisited(visited ? false : true)
 
-    setVisited(!visited)
+    setVisited(!visited);
+    handleVisitedCountries(country)
   };
 
   return (
