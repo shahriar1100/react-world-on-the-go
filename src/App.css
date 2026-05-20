@@ -1,67 +1,7 @@
 /* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-
-
-.container{
-  width: 1320px;
-  margin: 0 auto;
-  padding: 50px;
-  background: #000;
-}
-.flex{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.countryName{
-  color: brown;
-  font-size: 28px;
-}
-.countryCard {
-  width: 300px;
-  padding: 20px;
-  border-radius: 18px;
-  background: #ffffff;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  margin-bottom: 15px;
-  color: #000;
-
-  /* Modern Box Shadow */
-  box-shadow:
-    0 4px 10px rgba(0, 0, 0, 0.08),
-    0 10px 25px rgba(0, 0, 0, 0.12);
-}
-
-.countryCard:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 8px 20px rgba(0, 0, 0, 0.12),
-    0 15px 35px rgba(0, 0, 0, 0.18);
-}
-
-.countryCard img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.countryName {
-  color: #6c63ff;
-  font-weight: 700;
-}
-
-.mainCard{
-  color: #ffffff;
-}
-
-.textBlack{
-  color: #000;
-}
-
-
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -69,104 +9,56 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Body */
 body {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   min-height: 100vh;
   padding: 40px;
 }
 
-/* Card */
+/* Container */
+.container {
+  width: 1320px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* Flex Layout */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Country Card */
 .countryCard {
   width: 320px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
-  border-radius: 20px;
-  overflow: hidden;
-  padding-bottom: 20px;
+
   transition: 0.4s ease;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
+/* Hover */
 .countryCard:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.45);
+
+  box-shadow:
+    0 15px 40px rgba(99, 102, 241, 0.45);
 }
 
-/* Image */
-.countryCard img {
-  width: 100%;
-  height: 190px;
-  object-fit: cover;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Text Area */
-.countryCard h3,
-.countryCard p {
-  padding: 0 18px;
-}
-
-.countryCard h3 {
-  margin-top: 18px;
-  margin-bottom: 12px;
-  font-size: 22px;
-  font-weight: 600;
-  color: white;
-}
-
-.countryCard p {
-  margin-top: 10px;
-  font-size: 15px;
-  color: #d1d5db;
-}
-
-/* Highlight */
-.countryName {
-  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-}
-
-/* Optional */
-.textBlack {
-  color: white;
-}
-
-/* Grid Layout */
-.mainCard {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.btn {
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
-  color: white;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-/* Hover Effect */
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.4);
-}
-
-/* Click korle border asbe */
-.btn:focus {
-  outline: none;
-  border: 2px solid white;
-  box-shadow: 0 0 15px #8b5cf6;
-}
-
-.countryVisited{
+/* Active / Visited */
+.countryVisited {
   background: linear-gradient(
     135deg,
     #06b6d4,
@@ -175,7 +67,86 @@ body {
   );
 
   border: 2px solid white;
-  box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
+
+  box-shadow:
+    0 0 20px rgba(236, 72, 153, 0.5);
+
   transform: scale(1.02);
-  transition: 0.4s ease;
+}
+
+/* Image */
+.countryCard img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* Text */
+.countryCard h3,
+.countryCard p {
+  padding: 0 18px;
+  color: white;
+}
+
+.countryCard h3 {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.countryCard p {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #d1d5db;
+}
+
+/* Country Name */
+.countryName {
+  background: linear-gradient(90deg, #06b6d4, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Button */
+.btn {
+  margin: 18px;
+  padding: 12px 28px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  border: 2px solid transparent;
+  border-radius: 12px;
+
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #8b5cf6
+  );
+
+  color: white;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+/* Button Hover */
+.btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 25px rgba(139, 92, 246, 0.4);
+}
+
+/* Button Focus */
+.btn:focus {
+  outline: none;
+
+  border: 2px solid white;
+
+  box-shadow:
+    0 0 15px #8b5cf6;
 }
